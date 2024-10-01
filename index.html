@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Imobiliária Castro</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <header>
+        <div class="logo">
+            <img class="image" src="logo/logo-castro.png" alt="Logo da Imobiliária" />
+        </div>
+        <h2>Imóveis & Cia</h2>
+        <h3 class="texto">Sua conexão com o melhor do mercado imobiliário!</h3>
+    </header>
+    <nav>
+        <ul>
+            <li><a href="#home">Home</a></li>
+            <li><a href="#imoveis">Imóveis</a></li>
+            <li><a href="#sobre">Sobre</a></li>
+            <li><a href="#contato">Contato</a></li>
+        </ul>
+    </nav>
+    <main>
+        <h2>Imóveis em Destaque</h2>
+        <section class="destaque">
+            <div class="imovel">
+                <div class="carrossel">
+                    <img src="src/casa-ha.jpg" alt="Casa 1 - Imagem 1" class="active">
+                    <img src="src/casa-azul.jpg" alt="Casa 1 - Imagem 2">
+                    <img src="src/casa-ha-vista.jpg" alt="Casa 1 - Imagem 3">
+                    <button class="carrossel-btn prev">&lt;</button>
+                    <button class="carrossel-btn next">&gt;</button>
+                </div>
+                <div class="imovel-info">
+                    <h3>Casa para venda em Itupeva/SP</h3>
+                    <h4>Condomínio Residencial Horizonte Azul</h4>
+
+                    <p>Casa com 3 quartos, 3 suítes, 2 banheiros, garagem para 4 carros com 350m² de área</p>
+                    <p><strong>Valor: R$ 1.500,000</strong></p>
+                    <p><strong>Condomínio: R$ 650,00</strong>
+                    </p>
+                    
+                </div>
+            </div>
+            <div class="imovel">
+                <div class="video-container">
+                    <iframe width="100%" height="100%" src="https://www.youtube.com/embed/xgZrKo9ddXk?si=RuCs9gsJ6k0WBdY" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+
+                </div>
+                <div class="imovel-info">
+                    <h3>Lançamentos</h3>
+                    <p>Conheça o loteamento Apllausi Villagio no bairro do Engordadouro em Jundiaí/SP.</p>
+                </div>
+            </div>
+            <div class="imovel">
+                <div class="carrossel">
+                    <img src="src/casa-lagos.jpg" alt="Casa 2 - Imagem 1" class="active">
+                    <img src="src/casa-lagos-pisc.jpg" alt="Casa 2 - Imagem 2">
+                    <img src="src/casa-lagos-canil.jpg" alt="Casa 2 - Imagem 3">
+                    <button class="carrossel-btn prev">&lt;</button>
+                    <button class="carrossel-btn next">&gt;</button>
+                </div>
+                <div class="imovel-info">
+                    <h3>Casa a venda em Itupeva/SP</h3>
+                    <h4>Condomínio Residencial dos Lagos</h4>
+                    <p>Casa com 4 quartos, 4 suítes, 3 banheiros, 4 vagas de garagem e 400m² de área construída</p>
+                    <p><strong>Valor: R$ 3.750,000</strong></p>
+                    <p><strong>Condomínio: R$ 640,00</strong>
+                    </p>
+                </div>
+            </div>
+        </section>
+    </main>
+    <footer>
+        <p>&copy; 2024 Robert Castro Imóveis & Cia. Todos os direitos reservados. CRECI: 214.037-F</p>
+    </footer>
+
+    <script>
+        document.addEventListener('DOMContentLoaded', function () {
+            const carrosseis = document.querySelectorAll('.carrossel');
+
+            carrosseis.forEach(carrossel => {
+                const imgs = carrossel.querySelectorAll('img');
+                const prevBtn = carrossel.querySelector('.prev');
+                const nextBtn = carrossel.querySelector('.next');
+                let currentIndex = 0;
+
+                function showImage(index) {
+                    imgs.forEach(img => img.classList.remove('active'));
+                    imgs[index].classList.add('active');
+                }
+
+                prevBtn.addEventListener('click', () => {
+                    currentIndex = (currentIndex - 1 + imgs.length) % imgs.length;
+                    showImage(currentIndex);
+                });
+
+                nextBtn.addEventListener('click', () => {
+                    currentIndex = (currentIndex + 1) % imgs.length;
+                    showImage(currentIndex);
+                });
+            });
+        });
+    </script>
+</body>
+
+</html>
