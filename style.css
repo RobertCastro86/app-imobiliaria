@@ -12,11 +12,12 @@ header {
     text-align: center;
     padding: 1rem;
     display: flex;
-    justify-content: space-between;
+    justify-content: flex-start;
     align-items: center;
 }
 
 .texto {
+    text-align: center;
     display: flex;
     color: white;
     font-size: 15px;
@@ -139,7 +140,7 @@ main {
     height: 200px;
 }
 
-footer {
+footer-content {
     background-color: blue;
     color: #fff;
     text-align: center;
@@ -147,7 +148,7 @@ footer {
     margin-top: 2rem;
 }
 
-@media (max-width: 768px) {
+@media (max-width: 1200px) and (min-width: 300px) {
     .imovel {
         width: 100%;
     }
