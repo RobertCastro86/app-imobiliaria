@@ -1,3 +1,6 @@
 @media (max-width: 775px) {
-    
+    .footer-section {
+      flex-direction: row;
+      justify-content: space-around;
+    }
 }

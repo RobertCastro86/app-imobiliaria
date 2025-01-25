@@ -140,6 +140,7 @@ nav ul li a {
     text-align: center;
     padding: 1rem;
     margin-top: 2rem;
+    justify-content: center;
 } 
 
 .footer-content p {
@@ -147,12 +148,18 @@ nav ul li a {
 }
 
 .footer-section {
-    width: 33.33%;
-    display: flex;
     flex-direction: column;
     justify-content: center;
-    align-items: flex-start;
+    align-items: center;
+    gap: 10px;
+}
+
+.footer-section ul {
     list-style: none;
+}
+
+.footer-section, ul li a {
+    color: #fff;
 }
 
 .footer-bottom {
