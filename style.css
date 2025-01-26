@@ -7,17 +7,45 @@ body {
 }
 
 header {
-    background-color: #34495e;
+    background-image: url(src/banner.png);
+    background-size: cover;
+    background-position: center;
     color: #fff;
     text-align: center;
-    padding: 1rem;
+    padding: -1rem 1rem;
+    position: static;
 }
 
+.banner {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 10vh;
+    background-color: rgba(0, 0, 0, 0.5);
+}
+
+.banner h1 {
+    justify-content: center;
+    color: white;
+    font-size: 2rem;
+}
+
+.banner p {
+    display: flex;
+    align-items: center;
+    font-family: Georgia, 'Times New Roman';
+    justify-content: space-between;
+    color: white;
+    font-size: 1.0rem;
+}
 .logo {
+    width: 100px;
+    height: 100px;
     display: flex;
     font-size: 1.5rem;
     font-weight: bold;
     justify-content: center;
+    align-items: flex-start;
 }
 
 .image {
