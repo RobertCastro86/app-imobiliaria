@@ -3,4 +3,12 @@
       flex-direction: row;
       justify-content: space-around;
     }
+
+    .destaque {
+      flex-direction: column;
+    }
+
+    .imovel {
+      width: 100%;
+    }
 }
