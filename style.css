@@ -13,6 +13,8 @@ header {
     text-align: center;
     padding: -1rem 1rem;
     position: relative;
+    height: 200px;
+    justify-content: center;
 }
 
 header::before {
@@ -20,40 +22,16 @@ header::before {
     position: absolute;
     top: 0;
     left: 0;
-    width: 100%;
+    width: 400%;
     height: 100%;
-    background-color: rgba(0, 0, 0, 0.5);
 }
 
-.banner {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    height: 10vh;
-    background-color: rgba(0, 0, 0, 0.5);
-}
 
-.banner h1 {
-    position: relative;
-    z-index: 1;
-    justify-content: center;
-    color: white;
-    font-size: 2rem;
-}
-
-.banner p {
-    display: flex;
-    align-items: center;
-    font-family: Georgia, 'Times New Roman';
-    justify-content: space-between;
-    color: white;
-    font-size: 1.0rem;
-}
 .logo {
     width: 100px;
     height: 100px;
     display: flex;
-    font-size: 1.5rem;
+    font-size: 3.5rem;
     font-weight: bold;
     justify-content: center;
     align-items: flex-start;
@@ -72,7 +50,16 @@ header::before {
 main {
     padding: 2rem;
     margin: 0 auto;
-    display: block;
+    display: flex;
+}
+
+.titulo {
+    justify-content: center;
+    align-items: center;
+    display: flex;
+    font-family: Georgia, Times, 'Times New Roman', serif;
+    font-weight: 500px;
+    background: linear-gradient(blue,yellow,green,red);
 }
 
 nav {
@@ -97,6 +84,17 @@ nav ul li a {
     list-style-type: none;
     color: #fff;
     text-decoration: none;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    transition: 0.3s ease;
+    text-transform: uppercase;
+    overflow: hidden;
+    cursor: pointer;
+}
+
+nav ul li a:hover {
+    color: black;
 }
 
 .destaque {
@@ -112,6 +110,7 @@ nav ul li a {
     box-shadow: 0 0 10px rgba(0,0,0,0.1);
     border-radius: 5px;
     overflow: hidden;
+    flex-grow: 1;
 }
 
 .carrossel {
