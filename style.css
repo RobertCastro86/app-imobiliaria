@@ -3,7 +3,7 @@ body {
     line-height: 1.6;
     margin: 0;
     padding: 0;
-    overflow-x: hidden;
+    overflow-X: hidden;
     width: 100%;
     height: 300px;
 }
@@ -14,9 +14,9 @@ header {
     background-position: center;
     color: #fff;
     text-align: center;
-    padding: -1rem 1rem;
+    padding: 1rem;
     position: relative;
-    height: 200px;
+    height: calc(200px -2rem);
     justify-content: center;
 }
 
@@ -27,22 +27,23 @@ header::before {
     left: 0;
     width: 400%;
     height: 100%;
+    background-color: rgba(0, 0, 0, 0.3);
 }
 
 
 .logo {
-    width: 100px;
+    width: 50%;
     height: 100px;
     display: flex;
-    font-size: 3.5rem;
+    font-size: 2.5rem;
     font-weight: bold;
     justify-content: center;
     align-items: flex-start;
 }
 
 .image {
-    width: 100px;
-    height: 100px;
+    width: 70px;
+    height: 70px;
     border-radius: 50%;
     display: flex;
     justify-content: center;
@@ -53,7 +54,11 @@ header::before {
 main {
     padding: 2rem;
     margin: 0 auto;
-    display: flex;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    flex-wrap: wrap;
+    justify-content: space-between;
+    gap: 20px;
 }
 
 .titulo {
@@ -75,6 +80,7 @@ nav ul {
     padding: 0;
     margin: 0;
     display: flex;
+    flex-wrap: wrap;
     justify-content: center;
 }
 
@@ -94,6 +100,7 @@ nav ul li a {
     text-transform: uppercase;
     overflow: hidden;
     cursor: pointer;
+    font-size: 0.8rem;
 }
 
 nav ul li a:hover {
@@ -108,12 +115,11 @@ nav ul li a:hover {
 }
 
 .imovel {
-    width: calc(33.33% - 20px);
+    width: calc(100% - 20px);
     margin-bottom: 2rem;
     box-shadow: 0 0 10px rgba(0,0,0,0.1);
     border-radius: 5px;
     overflow: hidden;
-    flex-grow: 1;
 }
 
 .carrossel {
@@ -146,8 +152,6 @@ nav ul li a:hover {
     background-color: rgba(0, 0, 0, 0.5);
     color: #fff;
     border: none;
-    padding: 10px;
-    cursor: pointer;
 }
 
 .carrossel-btn.prev {
